@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Zadanie 20.09.2021r.</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="">
+        <script>
+            function oblicz(){
+                var a = document.getElementById("kilometry").value;
+                var b = document.getElementById("zielona gora").checked;
+                var suma = 0;
+                if(b == true){
+                    document.getElementById("wynik").innerHTML="dowozimy za darmo!";
+                }
+                else{
+                    suma = a*2;
+                    document.getElementById("wynik").innerHTML="Koszt dostawy to:"+suma+"zł";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Koszt dostawy</h3>
+        <input type="checkbox" name="ile" id="zielona gora">Jestem z zielonej góry<br>
+        <p>Albo</p>
+        <p>Podaj liczbę kilometrów do zielonej góry</p><input type="number" value="" id="kilometry">
+        <input type="button" id="oblicz" value="oblicz koszt" onclick="oblicz()">
+        <p id="wynik"></p>
+    </body>
+</html>
